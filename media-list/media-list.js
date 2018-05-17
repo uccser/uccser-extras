@@ -13,6 +13,7 @@ const EMBED_TYPES = [
 $(document).ready(function() {
   $("#get-files").click(function(){
     $("#errors").empty();
+    $(".invisible").removeClass("invisible").addClass("visible");
     get_all_files();
   });
 });
