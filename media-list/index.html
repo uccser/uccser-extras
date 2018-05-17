@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>UCCSER Media List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+    <main role="main" class="container mt-3">
+      <h1>UCCSER Media List</h1>
+
+      <p>
+        This page lists all our open source media files found within our GitHub repositories, in grid format with image previews.
+        We are also tracking down source files which have no yet been made available.
+        If you are looking for a particular source file, please <a href="mailto:csse-education-research@canterbury.ac.nz">contact us</a>.
+      </p>
+
+      <p>
+        To use this tool, you must enter in the access token you recieved in the email message into the box below.
+      </p>
+
+      <div class="mb-3">
+        <div class="form-row align-items-center">
+          <div class="col">
+            <input type="text" class="form-control" id="accessTokenInput" placeholder="Enter access token from email">
+          </div>
+          <div class="col-auto">
+            <button id="get-files" class="btn btn-primary">Get all files</button>
+          </div>
+        </div>
+        <div id="errors" class="text-danger"></div>
+      </div>
+      <p id="feedback" class="text-info text-center"></p>
+
+      <p class="mb-0">Jump to:</p>
+      <ul>
+        <li><a href="#csu-header">CS Unplugged Files</a></li>
+        <li><a href="#csfg-header">CS Field Guide Files</a></li>
+        <li><a href="#video-header">Video Files</a></li>
+      </ul>
+
+      <h2 id="csu-header">CS Unplugged Files</h2>
+      <div class="row border mb-5" id="csu-files"></div>
+
+      <h2 id="csfg-header">CS Field Guide Files</h2>
+      <div class="row border mb-5" id="csfg-files"></div>
+
+      <h2 id="video-header">Video Files</h2>
+      <div class="row border mb-5" id="video-files"></div>
+
+      <h2 id="other-header">Other Files</h2>
+      <div class="alert alert-warning" role="alert">
+        The original source images can be found on <a href="https://www.dropbox.com/sh/vnqkwvyvf2qadiq/AADRN4t3k71TZ2JagDNlb8mYa">Dropbox</a>, below are compressed versions.
+      </div>
+      <div class="row border mb-5" id="other-files"></div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="./media-list.js"></script>
+  </body>
+</html>
