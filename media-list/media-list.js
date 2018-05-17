@@ -13,7 +13,6 @@ const EMBED_TYPES = [
 $(document).ready(function() {
   $("#get-files").click(function(){
     $("#errors").empty();
-    $("#feedback").text("Getting files...");
     get_all_files();
   });
 });
