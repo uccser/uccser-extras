@@ -18,16 +18,16 @@ $(document).ready(function() {
 });
 
 function get_all_files(){
-  get_files("csunplugged/static/img", "cs-unplugged", "csu");
-  get_files("images", "cs-field-guide", "csfg");
-  get_files("interactives/fsa-washing-machine/img", "cs-field-guide", "csfg");
-  get_files("interactives/jpeg-compression/img", "cs-field-guide", "csfg");
-  get_files("interactives/packet-attack/assets", "cs-field-guide", "csfg");
-  get_files("interactives/trainsylvania/img", "cs-field-guide", "csfg");
-  get_files("interactives/sorting-algorithms/project-files/sprites", "cs-field-guide", "csfg");
+  get_github_files("csunplugged/static/img", "cs-unplugged", "csu");
+  get_github_files("images", "cs-field-guide", "csfg");
+  get_github_files("interactives/fsa-washing-machine/img", "cs-field-guide", "csfg");
+  get_github_files("interactives/jpeg-compression/img", "cs-field-guide", "csfg");
+  get_github_files("interactives/packet-attack/assets", "cs-field-guide", "csfg");
+  get_github_files("interactives/trainsylvania/img", "cs-field-guide", "csfg");
+  get_github_files("interactives/sorting-algorithms/project-files/sprites", "cs-field-guide", "csfg");
 }
 
-function get_files(path, repo, container) {
+function get_github_files(path, repo, container) {
   $.ajax({
     type: "GET",
     url: GITHUB_API_BASE + "repos/uccser/" + repo + "/contents/" + path,
@@ -41,13 +41,13 @@ function get_files(path, repo, container) {
       json: "application/vnd.github.v3+json",
     },
     success: function(data) {
-      show_files(data, repo, container);
+      show_github_files(data, repo, container);
     },
     error: show_error,
   });
 }
 
-function show_files(data, repo, container) {
+function show_github_files(data, repo, container) {
   data.forEach(function(item) {
     if (item.type == "file" && endsWithAny(MEDIA_TYPES, item.name)) {
       var element = $( "<div class='col-12 col-sm-6 col-md-4 col-lg-3 text-center border'></div>" );
@@ -62,7 +62,7 @@ function show_files(data, repo, container) {
       }
       $( "#" + container + "-files" ).append(element);
     } else if (item.type == "dir") {
-      get_files(item.path, repo, container);
+      get_github_files(item.path, repo, container);
     }
   });
 }
