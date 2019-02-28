@@ -8,11 +8,6 @@ This guide is for resolving ambiguity for specific words and phrases, to ensure 
 Use two words:
 - ``camel case``
 
-### computer science
-
-Should be capitalised:
-- ``Computer Science``
-
 ### licence | license
 
 Use the British English standard:
