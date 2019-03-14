@@ -3,6 +3,12 @@
 All English content should be spelled in New Zealand English (en-NZ), or British English (en-UK) if not defined.
 This guide is for resolving ambiguity for specific words and phrases, to ensure consistency in UCCSER content.
 
+### a | an
+
+Use depending on the inital *sound* made by the following word.
+- ``a`` when the following word *sounds* like it starts with a **consonant**. e.g. Do *a* homework task.
+- ``an`` when the following word *sounds* like it starts with a **vowel**. e.g. Do *an* honest task.
+
 ### camel case | camelcase | camel-case
 
 Use two words:
